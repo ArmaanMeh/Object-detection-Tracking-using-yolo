@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soccer-ball-tracker"
+version = "1.0.0"
+description = "Real-time soccer ball detection and tracking using YOLOv8/YOLOv3 and CSRT"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "GPL-3.0-only"}
+authors = [
+    {name = "OpenCV University", email = "info@opencvuniversity.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+
+dependencies = [
+    "opencv-python>=4.8.0",
+    "opencv-contrib-python>=4.8.0",
+    "numpy>=1.21.0",
+    "ultralytics>=8.0.0",
+    "torch>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/soccer-ball-tracker"
+Documentation = "https://github.com/yourusername/soccer-ball-tracker#readme"
+Repository = "https://github.com/yourusername/soccer-ball-tracker.git"
+Issues = "https://github.com/yourusername/soccer-ball-tracker/issues"
+
+[project.scripts]
+soccer-tracker = "main:main"
+soccer-tracker-yolov3 = "submission:main"
+
+[tool.setuptools]
+packages = ["soccer-ball-tracker"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip_glob = ["*/migrations/*"]
+
+[tool.pylint.messages_control]
+disable = ["C0330", "C0326"]
+
+[tool.pylint.format]
+max-line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v"

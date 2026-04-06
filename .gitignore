@@ -1,0 +1,47 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Large files (model weights and videos)
+yolo_files/
+*.weights
+*.mp4
+*.avi
+*.mov
+*.flv
+*.wmv
+*.webm
+
+# Output/results
+Output/
+
+# OS files
+.DS_Store
+Thumbs.db
+.thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+*.out
+*.bak
+
+# Data files
+/data/coco.names
