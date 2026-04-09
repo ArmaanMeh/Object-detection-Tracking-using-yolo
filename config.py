@@ -4,7 +4,6 @@
 # for the Soccer Ball Tracker project.
 
 import os
-
 # ============== Model Configuration ==============
 # YOLOv8 Model settings
 YOLOV8_MODEL_PATH = "yolo_files/yolov8n.pt"

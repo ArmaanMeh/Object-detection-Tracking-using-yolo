@@ -20,7 +20,6 @@ import numpy as np
 from ultralytics import YOLO
 import sys
 
-
 def main():
     """Main execution function for the soccer ball tracker."""
     

@@ -23,7 +23,6 @@ import cv2
 import numpy as np
 import sys
 
-
 # --- CONFIGURATION ---
 confThreshold = 0.4 
 nmsThreshold = 0.4
